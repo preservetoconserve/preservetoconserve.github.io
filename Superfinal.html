@@ -1,0 +1,461 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nixie+One" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
+  <link rel="shortcut icon" href = "Logo.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+  <title>Preserve to Conserve</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel = "stylesheet" href = "final.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="raphael.js"></script>
+  <!-- <script src="scale.raphael.js"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+  <script src="color.jquery.js"></script>
+  <script src="jquery.usmap.js"></script>
+</head>
+
+
+
+
+<body>
+<!--  <body style = "background-color: AliceBlue;"> -->
+<style>
+
+     .parallax {
+         /* The image used */
+         background-image: url("unsplash.png");
+         background-blend-mode: lighten;
+         /* Set a specific height */
+         height: 500px;
+
+         /* Create the parallax scrolling effect */
+         background-attachment: fixed;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+
+#header{
+  position: absolute;
+  z-index: 1000;
+  top: 200px;
+  left: 200px;
+
+}
+
+.text-box
+{
+  height: 600px;
+  padding: 50px;
+
+}
+
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+title
+{
+opacity: 0.3;
+}
+
+cornerlogo
+{
+    position: absolute;
+    top: -30px;
+    right: -50px;
+
+}
+#alert {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #ddd;
+  color: #333;
+  padding: 5px;
+  font-weight: bold;
+}
+
+img.arrow: hover
+{
+    display:none;
+}
+
+
+bg-1
+{
+    background-color: pink;
+}
+</style>
+
+
+
+     <!-- Container element --
+  <!--- <body background = https://files.slack.com/files-pri/TBY4DK116-FBZMJDZ16/2.jpg style = width "1000" height = "9000"> -->
+
+
+  <div class="parallax">
+    <div class="container">
+
+
+      <div class="centered"<strong>PRESERVE TO CONSERVE</strong></div>
+    </div>
+    <cornerlogo><img src="Logo.png" alt="Logo" height = "150" ></cornerlogo>
+  </div>
+<button class="tablink" onclick="openPage('Home', this, 'RGB(119, 136, 153)')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('AboutUs', this, 'LIGHTSLATEGRAY')" >About Us</button>
+<button class="tablink" onclick="openPage('AnnualData', this, 'RGB(119, 136, 153)')">Annual Data</button>
+<button class="tablink" onclick="openPage('GetInvolved', this, 'LIGHTSLATEGRAY')">Get Involved</button>
+<button class="tablink" onclick="openPage('ContactUs', this, 'RGB(119, 136, 153)')">Contact Us</button>
+<button class="tablink" onclick="openPage('References', this, 'RGB(119, 136, 153)')">References</button>
+
+
+<div id="Home" class="tabcontent" style>
+    <div class = "w3-display-middle">
+        <center><homepage_p class = "w3-jumbo w3-animate-top"> Explore pollution in the United States </homepage_p></center>
+        <hr class = "w3-border-grey" style="margin:auto;width:40%">
+        <br>
+        <center><titlehead> Disover the Air Quality Index of each state's capital</titlehead></center>
+        <nl>
+        <br>
+        <br>
+
+        <center><img class = "arrow" src="down.png" width="100" height="100"></center>
+        <br><br>
+
+        <center><div id="map" style="width: 750px; height: 630px;"></div></center>
+
+        <center><titlehead> Remember the color! Compare it to the chart below</titlehead></center>
+
+        <center><img class = "arrow" src="down.png" width="100" height="100"></center>
+        <br>
+        <center><img src = "image.png" style="width: 750px; height: 500px;"></center>
+
+
+
+        <div class = "container text-center bg-1">
+            jnsjdnjsns
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+  <script>
+  $(document).ready(function() {
+    $('#map').usmap({
+        'stateSpecificStyles': {
+          'AL': {fill: 'yellow'},
+          'AK': {fill: '#ADFF2F'},
+          'AZ': {fill: '#ADFF2F'},
+          'AR': {fill: '#ADFF2F'},
+          'CA': {fill: 'yellow'},
+          'CO': {fill: 'yellow'},
+          'CT': {fill: 'yellow'},
+          'DE': {fill: '#ADFF2F'},
+          'FL': {fill: '#ADFF2F'},
+          'GA': {fill: 'yellow'},
+          'HI': {fill: '#ADFF2F'},
+          'ID': {fill: 'yellow'},
+          'IL': {fill: '#ADFF2F'},
+          'IN': {fill: '#ADFF2F'},
+          'IA': {fill: '#ADFF2F'},
+          'KS': {fill: 'orange'},
+          'KY': {fill: 'green'},
+          'LA': {fill: 'yellow'},
+          'ME': {fill: '#ADFF2F'},
+          'MD': {fill: '#ADFF2F'},
+          'MA': {fill: '#ADFF2F'},
+          'MI': {fill: '#ADFF2F'},
+          'MN': {fill: '#ADFF2F'},
+          'MS': {fill: 'yellow'},
+          'MO': {fill: '#ADFF2F'},
+          'MT': {fill: 'yellow'},
+          'NE': {fill: 'green'},
+          'NV': {fill: 'red'},
+          'NH': {fill: '#ADFF2F'},
+          'NJ': {fill: '#ADFF2F'},
+          'NM': {fill: 'yellow'},
+          'NY': {fill: '#ADFF2F'},
+          'NC': {fill: '#ADFF2F'},
+          'ND': {fill: '#ADFF2F'},
+          'OH': {fill: '#ADFF2F'},
+          'OK': {fill: '#ADFF2F'},
+          'OR': {fill: 'green'},
+          'PA': {fill: '#ADFF2F'},
+          'RI': {fill: '#FFA812'},
+          'SC': {fill: 'green'},
+          'SD': {fill: 'green'},
+          'TN': {fill: 'yellow'},
+          'TX': {fill: 'yellow'},
+          'UT': {fill: 'yellow'},
+          'VT': {fill: '#ADFF2F'},
+          'VA': {fill: '#ADFF2F'},
+          'WA': {fill: 'green'},
+          'WV': {fill: '#ADFF2F'},
+          'WI': {fill: '#ADFF2F'},
+          'WY': {fill: '#ADFF2F'}
+      },
+      'click' : function(event, data) {
+        $('#alert')
+          .text('You clicked'+data.name+'!')
+          .stop()
+          .css('backgroundColor', '#ff0')
+          .animate({backgroundColor: '#ddd'}, 1000);
+      }
+    });
+
+  });
+  </script>
+
+</div>
+<div id="AboutUs" class="tabcontent">
+  <center><h2><font color = "black"> MEET OUR TEAM! </h2></center>
+  <br>
+
+<center>
+<div class = "row">
+  <div class = "column">
+    <div class = "card">
+      <img src = "Aashna.png" alt = "Aashna" style = "width:100%">
+      <div class = "whatever">
+        <h2> Aashna Dalal</h2>
+        <p> Aashna Dalal is 15 years old and is <br> a rising junior in high school. <br> She is an only child and enjoys spending her spare time with <br> friends and family. Her hobbies include playing tennis, swimming, <br> and traveling.  </p>
+      </div>
+    </div>
+  </div>
+<div class = "column">
+  <div class = "card">
+    <img src = "Analei.jpg" alt = "Analei" style = "width:100%">
+    <div class = "whatever">
+      <h2> Analei T. Song Turnbull</h2>
+      <p>Analei Song Turnbull is a 15 year <br> old homeschooler going into junior year. She enjoys acting, filmmaking, drawing, playing video games, watching movies, and spending <br> time with friends. She hopes to go to college for Filmmaking. </p>
+    </div>
+  </div>
+</div>
+
+
+<div class = "column">
+  <div class = "card">
+    <img src = "Brianna.jpg" alt = "Brianna" style = "width:100%">
+    <div class = "whatever">
+      <h2> Brianna Ganiere</h2>
+      <p>Brianna Ganiere is a 16 year old homeschooler. When she's not doing school she's probably playing video games, writing, coding, watching movies or tv shows, or cosplaying. She has so many fandoms and loves her family.  </p>
+    </div>
+  </div>
+</div>
+</div>
+<div class = "row">
+<div class = "column">
+    <div class = "card">
+    <img src = "Kirsten.jpg" alt = "Kirsten" style = "width:100%">
+    <div class = "whatever">
+      <h2> Kirsten Go </h2>
+      <p>Kirsten Go is 17 years old and lives in San Marino, California with her <br> family and her two dogs. She is about to start her senior year of high <br> school and is nervous about doing <br> college applications.</p>
+    </div>
+  </div>
+</div>
+<div class = "column">
+    <div class = "card">
+    <img src = "Leila.jpg" alt = "Leila" style = "width:100%">
+    <div class = "whatever">
+      <h2>Leila Khorrami</h2>
+      <p> Leila Khorrami is 16 years old and a rising junior! She has 2 siblings and loves spending time with friends and family! She enjoys using technology to make her dreams come to life with digital art, web design, and entrepreneurship. </p>
+    </div>
+  </div>
+</div>
+
+<div class = "column">
+    <div class = "card">
+    <img src = "Sammy.jpg" alt = "Sammy" style = "width:100%">
+    <div class = "whatever">
+      <h2>Sammy Veres</h2>
+      <p>Sammy is a Teaching Assistant at Girls Who Code this summer and a Girls Who Code alumni. She is also a sophomore studying cognitive science at UC Davis. In her free time, she enjoys playing guitar/ukulele and spending time with her mom.</p>
+    </div>
+  </div>
+</div>
+
+
+</center>
+
+
+</div>
+</div>
+
+
+<div id="AnnualData" class="tabcontent">
+  <div class="ADparallax1"></div>
+    <div style="height:200px;background-color:white;">
+      <h3><font color = "black"> Why?</h3>
+      <p><font color = "black">We collected annual data from the years 2013-2017 about the average levels of PM2.5 pollution in California, New York, and Hawaii. We chose California because it is our home, New York because of all the hustle and bustle of a big city, and Hawaii because of the idyllic, island lifestyle. Our data is sourced from the United States Environmental Agency.</p>
+    </div>
+
+  <div class = "ADparallax2"></div>
+    <div style="height:200px;background-color:white;">
+      <h3><font color = "black"> What? </h3>
+      <p><font color = "black">PM2.5 is a fine particle that can come from many sources such as power plants, vehicles, fires,
+        airplanes, dust storms, and more. PM2.5 can be harmful when inhaled by animals or people. PM2.5
+        helps cause lung and heart disease; it also worsens asthma. Long term exposure to this chemical
+        can cause your arteries to close and make heart attacks more likely.</p>
+    </div>
+
+  <div class = "ADparallax3"></div>
+    <div style="height:100px;background-color:white;">
+      <h3><font color = "black"> How? </h3>
+      <p><font color = "black">The data graphs were made in python. We collected the data and had to parse through it. After parsing through we picked the data we wanted and started to code the graphs. We were able to add the data into the graph in python and imported it into HTML.  </p>
+    </div>
+
+  <div class = "ADparallaxNY"></div>
+    <div style="height:100px;background-color:white;">
+      <h3><font color = "black"> New York Results</h3>
+      <p><font color = "black">From 2013 to 2017, New York (the state) showed a decrease in overall AQI, showing that the quality of the air has improved. This improvement can be best seen in the air quality trends of New York City. In the past, New York City had large amounts of air pollution and was one of the most polluted cities of the United States. Now, the air quality of New York City is very different. According to an article written in April 2018, New York City has “the cleanest air that the city’s had for centuries.” The example of New York City shows that pollution can be reduced significantly through the efforts of people working together.</p>
+    </div>
+
+
+  <div class = "ADparallaxCA"></div>
+    <div style="height:100px;background-color:white;">
+      <h3><font color = "black">California Results</h3>
+      <p><font color = "black">Despite an overall increase of air quality index(AQI) from 2013 to 2017, California still has some
+        of the most polluted cities in the United States. These polluted cities include Los Angeles, Long Beach, and Bakersfield, which are all in Southern California. The high levels of pollution are
+        attributed to increasing population, the usage of cars, and increasing temperature. Even though
+        Southern California is highly polluted, the cities of Northern California have very good air
+        quality. This helps to balance the overall AQI of California as a result.</p>
+    </div>
+
+    <div class = "ADparallaxHI"></div>
+    <div style="height:100px;background-color:white;">
+      <h3><font color = "black">Hawaii Results</h3>
+      <p><font color = "black">As can be seen in the graph, the range of numbers in Hawaii’s overall AQI is within a healthy range. However, the air quality can sometimes be negatively affected by the volcanoes on the islands. Harmful gases can be released from active volcanoes and combine with normal air to form volcanic smog. Since Hawaii has relatively clean air, volcanic smog is the only major source of air pollution in Hawaii.</p>
+    </div>
+  </div>
+
+<div id="ContactUs" class="tabcontent">
+
+<div><center><h4><font color = "black"><strong>Why contact us?</center></h4></strong></div>
+<div><center><h4><font color = "black"><strong>We are able to answer questions, give advice, and help encourage you to help change the world we live in.</center></h4></strong></div>
+<div><center><h4><font color = "black"><strong>Here are some sample questions to ask!</center></h4></strong></div>
+<div><center><h4><font color = "black"><strong>What is the polution in my area?</center></h4></strong></div>
+<div><center><h4><font color = "black"><strong>How is a simple way I can help everyday?</center></h4></strong></div>
+<div><center><h4><font color = "black"><strong>Does it take that long to help?</center></h4></strong></div>
+
+
+
+  <div class="container">
+  <form action="action_page.php">
+<font color = "black">
+<font face = "Arial">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="usa">Europe</option>
+      <option value="usa">Asia</option>
+      <option value="usa">Africa</option>
+      <option value="usa">Antarctica</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</div>
+<div id = "GetInvolved" class = "tabcontent">
+  <center><h3><strong>Would you like to learn more about PM2.5 and help prevent it? Here are a few videos and websites to help you get involved! These all will help you learn more and be aware.</strong></center></h3>
+  <div><h3><center><p style = "color:Black;"><a href = "https://www.epa.gov/air-quality-management-process/managing-air-quality-public-participation"> Epa.gov (USA Environmental Protection Agency) </h3></center></a>
+  <div><h3><center><p style = "color:Black;"> Public Participation for Managing Air Quality</h3></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/EsKJUNj5c7Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></center></iframe>
+<div><h3><center><p style = "color:Black;"><a href="https://www.greenpeace.org/usa/">Greenpeace </h3></center></a>
+<div><h3><center><p style = "color:Black;"> "A global, independent campaigning organization that uses peaceful protest and creative communication to expose global environmental problems and promote solutions that are essential to a green and peaceful future."</h3></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/e6rglsLy1Ys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></center></iframe>
+  <div><h3><center><p style = "color:Black;"><a href= "http://www.lung.org/our-initiatives/healthy-air/outdoor/fighting-for-healthy-air/about-fighting-for-healthy-air/tips-to-fight-for-healthy-air.html"> Lung.org - Tips to Fight for Healthy Air in Your Community</h3></center></a>
+  <div><h3><center><p style = "color:Black;"> Tips to Fight for Healthy Air in Your Community</h3></center>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="References" class="tabcontent">
+    <font color = "Black"><font face = "Nixie One"><center><h4><strong>We would like to credit some of the websites that helped create this one.</h4></strong></center>
+    <center><img src="vashishtha-jogi-57622-unsplash.jpg" width="1000" height ="500"></center>
+    <div><h3><center><p style = "color:Black;"><a href="https://www.airnow.gov"><strong>AirNow.gov </strong></h3></center></a>
+    <center><h4> <strong> AirNow is where we got our data for the interactive map. We took the information of how much AQI were in the state capital's Aug 1st.</h4> </strong></center>
+    <center><img src="romello-williams-384006-unsplash.jpg" width="1000" height ="500"></center>
+    <div><h3><center><p style = "color:Black;"><a href="https://www.w3schools.com/"><strong>w3schools.com </strong></h3></center></a>
+    <center><h4><strong> We used W3schools to see tutorials and learn different codes to aply to our website. The parallax is a great example.</h4></strong></center>
+    <center><img src="jakob-owens-464900-unsplash.jpg" width="1000" height ="500"></center>
+    <div><h3><center><p style = "color:Black;"><a href="https://www.epa.gov/outdoor-air-quality-data/download-daily-data "><strong>www.epa.gov </strong></h3></center></a>
+    <center><h4><strong>EPA is the website we used to get the data for our data graphs.We got the years and how much PM2.5 the state had as a whole.</h4></strong></center>
+    <center><img src="jonas-jacobsson-545905-unsplash.jpg" width="1000" height ="500"></center>
+    <div><h3><center><p style = "color:Black;"><a href="https://newsignature.github.io/us-map/"><strong>newsignature.github.io</strong></h3></center></a>
+    <center><h4><strong>We used the U.S. Map as our API. This website gave us the map that glowed different colors when the mouse hovers over it.</h4> </strong></center>
+    <center><img src="caitlyn-wilson-381646-unsplash.jpg" width="1000" height ="500"></center>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+  <script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
+<!--- <div id="map" style="width: 300px; height: 300px;"></div> // THIS IS FOR THE MAP -->
