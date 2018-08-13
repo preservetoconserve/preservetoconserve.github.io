@@ -1,0 +1,370 @@
+/* Style inputs with type="text", select elements and textareas */
+* {box-sizing: border-box}
+/* Set height of body and the document to 100% */
+body{
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    font-family: "Raleway";
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+  font-family: Oswald;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+  line-height: 18.5714px;
+  color: black;
+}
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 16.6666%;
+}
+.tablink:hover {
+    background-color: #777;
+}
+/* Style the tab content (and add height:100% for full plage content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    align-items: center;
+    height: 60%;
+    width: 95%;
+    font-family: serif;
+
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.top1 {
+  display: inline-flex;
+
+}
+
+
+
+.top2{
+  float: left;
+}
+
+.top3{
+  margin-top: 50px;
+  font-size: 30;
+}
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.carousel-caption {
+
+top: -10;
+
+}
+.carousel-caption1{bottom:0;}
+
+.logo {
+    width: 600px;
+    height: 500px;
+}
+
+.container{
+  width: 640px;
+  height: 360px;
+  position: relative;
+  text-align: center;
+}
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.homeparallax {
+         /* The image used */
+         background-image: url("title.png");
+
+         /* Set a specific height */
+         height: 500px;
+
+         /* Create the parallax scrolling effect */
+         background-attachment: fixed;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+
+.ADparallax1 {
+    /* The image used */
+    background-image: url("https://images.unsplash.com/photo-1451148693655-87a82f19229d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cfb743d2decc7fac2411e5f1ffc36e50&auto=format&fit=crop&w=1652&q=80");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+}
+
+.ADparallax2 {
+    /* The image used */
+    background-image: url("koushik-das-269984-unsplash.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.ADparallax3
+{
+
+/* The image used */
+    background-image: url("code_snip.png");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+
+
+
+}
+
+.ADparallaxNY
+{
+
+/* The image used */
+    background-image: url("NYgraph.png");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px 300px;
+
+
+
+}
+
+.ADparallaxCA
+{
+
+/* The image used */
+    background-image: url("Cagraph.png");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px 300px;
+
+
+
+}
+
+
+.ADparallaxHI
+{
+
+/* The image used */
+    background-image: url("HIgraph.png");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px 300px;
+
+
+
+}
+
+
+
+
+
+
+
+#header{
+  position: absolute;
+  z-index: 1000;
+  top: 200px;
+  left: 200px;
+
+}
+
+.text-box
+{
+  height: 600px;
+  padding: 50px;
+
+}
+
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #311151;
+    font-family:'Nixie One';
+    font-size: 55px;
+    opacity: 1.0;
+
+  }
+
+homepage_p
+{
+    font-family: "Raleway", sans-serif;
+    color:gray;
+    font-size: 50px;
+}
+
+
+/*About Us page CSS Code */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+p{
+  font-family: 'Nixie One';
+  font-size: 20px;
+}
+h2{
+  font-family:"arial";
+  color: black;
+
+}
+
+titlehead
+{
+    font-family:'Raleway';
+    font-size: 13 px;
+    font-weight: bold;
+    color:gray;
+}
