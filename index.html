@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>US Map Demo</title>
+
+	<style>
+	  #alert {
+	    font-family: Arial, Helvetica, sans-serif;
+	    font-size: 16px;
+	    background-color: #ddd;
+	    color: #333;
+	    padding: 5px;
+	    font-weight: bold;
+	  }
+	</style>
+
+	<script src="../lib/raphael.js"></script>
+	<!-- <script src="scale.raphael.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+	<script src="color.jquery.js"></script>
+	<script src="../jquery.usmap.js"></script>
+
+	<script>
+	$(document).ready(function() {
+	  $('#map').usmap({
+		  'stateSpecificStyles': {
+  			'AL': {fill: 'yellow'},
+  			'AK': {fill: '#ADFF2F'},
+  			'AZ': {fill: '#ADFF2F'},
+  			'AR': {fill: '#ADFF2F'},
+  			'CA': {fill: 'yellow'},
+  			'CO': {fill: 'yellow'},
+  			'CT': {fill: 'yellow'},
+  			'DE': {fill: '#ADFF2F'},
+  			'FL': {fill: '#ADFF2F'},
+  			'GA': {fill: 'yellow'},
+  			'HI': {fill: '#ADFF2F'},
+  			'ID': {fill: 'yellow'},
+  			'IL': {fill: '#ADFF2F'},
+  			'IN': {fill: '#ADFF2F'},
+  			'IA': {fill: '#ADFF2F'},
+  			'KS': {fill: 'orange'},
+  			'KY': {fill: 'green'},
+  			'LA': {fill: 'yellow'},
+  			'ME': {fill: '#ADFF2F'},
+  			'MD': {fill: '#ADFF2F'},
+  			'MA': {fill: '#ADFF2F'},
+  			'MI': {fill: '#ADFF2F'},
+  			'MN': {fill: '#ADFF2F'},
+  			'MS': {fill: 'yellow'},
+  			'MO': {fill: '#ADFF2F'},
+  			'MT': {fill: 'yellow'},
+  			'NE': {fill: 'green'},
+  			'NV': {fill: 'red'},
+  			'NH': {fill: '#ADFF2F'},
+  			'NJ': {fill: '#ADFF2F'},
+  			'NM': {fill: 'yellow'},
+  			'NY': {fill: '#ADFF2F'},
+  			'NC': {fill: '#ADFF2F'},
+  			'ND': {fill: '#ADFF2F'},
+  			'OH': {fill: '#ADFF2F'},
+  			'OK': {fill: '#ADFF2F'},
+  			'OR': {fill: 'green'},
+  			'PA': {fill: '#ADFF2F'},
+  			'RI': {fill: '#FFA812'},
+  			'SC': {fill: 'green'},
+  			'SD': {fill: 'green'},
+  			'TN': {fill: 'yellow'},
+  			'TX': {fill: 'yellow'},
+  			'UT': {fill: 'yellow'},
+  			'VT': {fill: '#ADFF2F'},
+  			'VA': {fill: '#ADFF2F'},
+  			'WA': {fill: 'green'},
+  			'WV': {fill: '#ADFF2F'},
+  			'WI': {fill: '#ADFF2F'},
+  			'WY': {fill: '#ADFF2F'}
+  		},
+
+
+	    'click' : function(event, data) {
+	      $('#alert')
+	        .text('Click '+data.name+' on map 1')
+	        .stop()
+	        .css('backgroundColor', '#ff0')
+	        .animate({backgroundColor: '#ddd'}, 1000);
+	    }
+	  });
+
+
+	});
+	</script>
+</head>
+<body>
+
+  <center><div id="map" style="width: 750px; height: 630px; border: solid 3px blue;"></div></center>
+  <br>
+  <center><img src = "image.png" style="width: 750px; height: 500px; border: solid 3px blue"></center>
+
+
+
+</body>
+</html>
